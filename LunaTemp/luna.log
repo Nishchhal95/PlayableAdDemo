@@ -1,0 +1,135 @@
+report@config:load 4.04
+Authorized using stored user info.
+report@account:authorize 7.85
+stderr: 'rm' is not recognized as an internal or external command,
+operable program or batch file.
+
+Exporting assets from Unity.....
+
+[ Stage1 ] Assets exported from Unity and staged for further processing
+report@unity:export 2034.80
+report@config:load 2.84
+Resources:
+{}
+report@assets:stage2 1513.05
+report@assets:stage3 149.78
+[ Stage2 ] Assets postprocessed and bundled successfully
+report@config:unity 0.09
+report@config:load 2.77
+report@config:unity 0.20
+report@code:compose 26.35
+Authorized using stored user info.
+report@account:authorize 4.73
+MSBuild version 17.9.8+b34f75857 for .NET Framework
+
+Build started 12/10/2024 21:35:13.
+
+
+
+Project "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" on node 1 (Rebuild target(s)).
+
+CoreClean:
+  Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.AssemblyReference.cache".
+
+  Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CoreCompileInputs.cache".
+
+GenerateTargetFrameworkMonikerAttribute:
+Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+
+CoreCompile:
+  C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:CS0626,1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:UNITY_LUNA;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_2022;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2022_3;UNITY_2022_3_33 /highentropyva+ /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll /debug+ /debug:full /optimize- /out:obj\Debug\UnityScriptsCompiler.dll /subsystemversion:6.00 /target:library /warnaserror- /utf8output /langversion:8 "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\PlayerInputManager.cs" Properties/AssemblyInfo.cs Sources/OtherDummyScript.cs "obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(15,19): error CS0234: The type or namespace name 'InputSystem' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(16,19): error CS0234: The type or namespace name 'InputSystem' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(2,19): error CS0234: The type or namespace name 'InputSystem' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(18,37): error CS0246: The type or namespace name 'IInputActionCollection2' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(102,26): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(107,24): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(112,17): error CS0540: 'GameControls.IEnumerable.GetEnumerator()': containing type does not implement interface 'IEnumerable' [C:\Users\nishc\Downloads\6.1.1
+\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(129,12): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(46,33): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(134,28): error CS0246: The type or namespace name 'InputBinding' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(134,58): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(52,35): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(58,32): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(20,12): error CS0246: The type or namespace name 'InputActionAsset' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(88,12): error CS0246: The type or namespace name 'InputBinding' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(94,12): error CS0246: The type or namespace name 'ReadOnlyArray<>' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(94,26): error CS0246: The type or namespace name 'InputDevice' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(100,12): error CS0246: The type or namespace name 'ReadOnlyArray<>' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(100,26): error CS0246: The type or namespace name 'InputControlScheme' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(127,24): error CS0246: The type or namespace name 'InputBinding' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(140,22): error CS0246: The type or namespace name 'InputActionMap' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(142,22): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(143,22): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(148,16): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(149,16): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(150,16): error CS0246: The type or namespace name 'InputActionMap' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(154,41): error CS0246: The type or namespace name 'InputActionMap' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(194,29): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(195,32): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+  CompilerServer: server - server processed compilation - bd02a482-105e-4088-b3e4-61509bb0ef6d
+
+Done Building Project "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (Rebuild target(s)) -- FAILED.
+
+[ error ] $
+[ error ] $Build FAILED.
+[ error ] $
+[ error ] $
+[ error ] $"C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (Rebuild target) (1) ->
+[ error ] $(CoreCompile target) -> 
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(15,19): error CS0234: The type or namespace name 'InputSystem' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(16,19): error CS0234: The type or namespace name 'InputSystem' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(2,19): error CS0234: The type or namespace name 'InputSystem' does not exist in the namespace 'UnityEngine' (are you missing an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(18,37): error CS0246: The type or namespace name 'IInputActionCollection2' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(102,26): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(107,24): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(112,17): error CS0540: 'GameControls.IEnumerable.GetEnumerator()': containing type does not implement interface 'IEnumerable' [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(129,12): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(46,33): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(134,28): error CS0246: The type or namespace name 'InputBinding' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(134,58): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(52,35): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(58,32): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(20,12): error CS0246: The type or namespace name 'InputActionAsset' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(88,12): error CS0246: The type or namespace name 'InputBinding' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(94,12): error CS0246: The type or namespace name 'ReadOnlyArray<>' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(94,26): error CS0246: The type or namespace name 'InputDevice' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(100,12): error CS0246: The type or namespace name 'ReadOnlyArray<>' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(100,26): error CS0246: The type or namespace name 'InputControlScheme' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(127,24): error CS0246: The type or namespace name 'InputBinding' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(140,22): error CS0246: The type or namespace name 'InputActionMap' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(142,22): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(143,22): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(148,16): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(149,16): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(150,16): error CS0246: The type or namespace name 'InputActionMap' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(154,41): error CS0246: The type or namespace name 'InputActionMap' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(194,29): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\GameControls.cs(195,32): error CS0246: The type or namespace name 'InputAction' could not be found (are you missing a using directive or an assembly reference?) [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+[ error ] $
+[ error ] $    0 Warning(s)
+[ error ] $    29 Error(s)
+[ error ] $
+[ error ] $
+[ error ] $Time Elapsed 00:00:00.28
+[ error ] $
+﻿
+[ error ] $﻿
+Diagnostics gathered successfully
+report@code:build 5469.76
+report@diagnostics:verify 0.46
+
+Fatal error while building C# code
+[ error ] $Project failed to build, check project diagnostics
+Error: DIAGNOSTICS_FATAL_ERROR
+    at Function.checkForErrors (C:\Users\nishc\Downloads\6.1.1\pipeline\Jakefile.js:6:2986842)
+    at async _0x52cc37.action (C:\Users\nishc\Downloads\6.1.1\pipeline\Jakefile.js:6:2991825)

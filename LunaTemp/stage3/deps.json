@@ -1,0 +1,24 @@
+{
+  "ignores": [],
+  "groups": [
+    [
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/GameControls.cs",
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/CatController.cs"
+    ],
+    [
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/GuardController.cs"
+    ],
+    [
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/PlayerInputManager.cs"
+    ],
+    [
+      "C:/Users/nishc/Downloads/6.1.1/pipeline/templates/LunaCompiler/Scripts/Properties/AssemblyInfo.cs"
+    ],
+    [
+      "C:/Users/nishc/Downloads/6.1.1/pipeline/templates/LunaCompiler/Scripts/Sources/OtherDummyScript.cs"
+    ],
+    [
+      "C:/Users/nishc/Downloads/6.1.1/pipeline/templates/LunaCompiler/Scripts/obj/Debug/.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+    ]
+  ]
+}
