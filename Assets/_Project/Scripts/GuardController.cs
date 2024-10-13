@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GuardController : MonoBehaviour
 {
-    [SerializeField] private Transform player;
+    [SerializeField] private CatController player;
     [SerializeField] private float visionRange = 1f;
     [SerializeField] private float visionAngle = 60f;
     [SerializeField] private LayerMask obstacleMask;
@@ -15,6 +15,7 @@ public class GuardController : MonoBehaviour
     [SerializeField] private Transform targetPoint;
     [SerializeField] private bool canMove;
     [SerializeField] float timeElapsed = 0f;
+    [LunaPlaygroundField("Guard Move duration to move from one to another point", 3, "Game Settings")]
     [SerializeField] float timeDuration = 100f;
 
     private void Start()
@@ -33,7 +34,7 @@ public class GuardController : MonoBehaviour
 
     private IEnumerator MoveRoutine()
     {
-        while (canMove)
+        while (canMove && !player.GameOver)
         {
             transform.position = Vector3.Lerp(startingPosition, targetPoint.position, timeElapsed / timeDuration);
             timeElapsed += Time.deltaTime;
@@ -74,12 +75,17 @@ public class GuardController : MonoBehaviour
 
     private void LookForPlayer()
     {
+        if (player.GameOver)
+        {
+            return;
+        }
+        
         if (!IsPlayerInRange())
         {
             return;
         }
         
-        Vector3 directionToPlayer = (player.position - transform.position).normalized;
+        Vector3 directionToPlayer = (player.transform.position - transform.position).normalized;
 
         float angleToPlayer = Vector3.Angle(transform.forward, directionToPlayer);
         if (angleToPlayer < visionAngle / 2)
@@ -87,6 +93,7 @@ public class GuardController : MonoBehaviour
             if (!CanRaycastPlayer(directionToPlayer))
             {
                 Debug.Log("Player Detected!");
+                player.GameEnd();
                 canMove = false;
             }
         }

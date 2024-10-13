@@ -2,7 +2,6 @@
   "dependencies": {
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.development": "1.0.1",
-    "com.unity.inputsystem": "1.7.0",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.4",
     "uk.lunalabs.luna": "file:C:/Users/nishc/Downloads/6.1.1/scripts",

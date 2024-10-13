@@ -1,15 +1,16 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class CatController : MonoBehaviour
 {
+    public bool GameOver { get; private set; }
+    
     [SerializeField] private Rigidbody catRb;
     
+    [LunaPlaygroundField("Threshold to Drag", 2, "Game Settings")]
     [SerializeField] private float dragThreshold = 20f;
+    [LunaPlaygroundField("Player Move Speed", 1, "Game Settings")]
     [SerializeField] private float moveSpeed = 0.01f;
  
-    
-    private GameControls gameControls;
     private Vector2 startPointerPosition;
     private Vector2 currentPointerPosition;
     private Vector2 dragDirection;
@@ -17,25 +18,18 @@ public class CatController : MonoBehaviour
     private bool pointerPressed = false;
     private bool isDragging = false;
 
-    private void Awake()
+    private void Update()
     {
-        gameControls = new GameControls();
-    }
+        if (Input.GetMouseButtonDown(0))
+        {
+            OnPointerPress();
+        }
+        else if(Input.GetMouseButtonUp(0))
+        {
+            OnPointerRelease();
+        }
 
-    private void OnEnable()
-    {
-        gameControls.Player.PointerPress.started += OnPointerPress;
-        gameControls.Player.PointerPress.canceled += OnPointerRelease;
-        gameControls.Player.PointerPosition.performed += OnPointerMove;
-        gameControls.Enable();
-    }
-    
-    private void OnDisable()
-    {
-        gameControls.Player.PointerPress.started -= OnPointerPress;
-        gameControls.Player.PointerPress.canceled -= OnPointerRelease;
-        gameControls.Player.PointerPosition.performed -= OnPointerMove;
-        gameControls.Disable();
+        OnPointerMove();
     }
 
     private void FixedUpdate()
@@ -43,26 +37,26 @@ public class CatController : MonoBehaviour
         MoveCat();
     }
 
-    private void OnPointerPress(InputAction.CallbackContext context)
+    private void OnPointerPress()
     {
-        startPointerPosition = gameControls.Player.PointerPosition.ReadValue<Vector2>();
+        startPointerPosition = Input.mousePosition;
         pointerPressed = true;
     }
     
-    private void OnPointerRelease(InputAction.CallbackContext context)
+    private void OnPointerRelease()
     {
         pointerPressed = false;
         isDragging = false;
     }
     
-    private void OnPointerMove(InputAction.CallbackContext context)
+    private void OnPointerMove()
     {
         if (!pointerPressed)
         {
             return;
         }
 
-        DetectDrag(context.ReadValue<Vector2>());
+        DetectDrag(Input.mousePosition);
     }
 
     private void DetectDrag([Bridge.Ref] Vector2 currentPointerPos)
@@ -88,6 +82,30 @@ public class CatController : MonoBehaviour
 
         Vector3 newPosition = catRb.position + moveDirection * (moveSpeed * Time.fixedDeltaTime);
         Quaternion newRotation = Quaternion.LookRotation(moveDirection);
-        catRb.Move(newPosition, newRotation);
+        catRb.velocity = Vector3.zero;
+        catRb.velocity = newPosition - catRb.position;
+        //catRb.MovePosition(newPosition);
+        catRb.MoveRotation(newRotation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (!other.CompareTag("Win"))
+        {
+            return;
+        }
+        LunaLifeCycleEnd();
+    }
+
+    public void GameEnd()
+    {
+        GameOver = true;
+        LunaLifeCycleEnd();
+    }
+
+    private void LunaLifeCycleEnd()
+    {
+        Luna.Unity.LifeCycle.GameEnded();
+        Luna.Unity.Playable.InstallFullGame();
     }
 }
