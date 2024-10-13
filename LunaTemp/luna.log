@@ -1,34 +1,38 @@
-report@config:load 25.16
+report@config:load 22.79
 Authorized using stored user info.
-report@account:authorize 31.49
+report@account:authorize 13.69
 stderr: 'rm' is not recognized as an internal or external command,
 operable program or batch file.
 
-Exporting assets from Unity.......
+Exporting assets from Unity......
 
 [ Stage1 ] Assets exported from Unity and staged for further processing
-report@unity:export 4048.91
-report@config:load 13.28
+report@unity:export 3051.02
+report@config:load 12.33
+Using D:/Unity Projects/PlayableAdDemo/Assets/TextMesh Pro/Fonts/LiberationSans.ttf file to generate an atlas for LiberationSans[53584] font
+  Using alphabet  §1234567890-=qwertyuiop[]asdfghjkl;'\`zxcvbnm,./±!@#$%^&*()_+QWERTYUIOP{}ASDFGHJKL:"|~ZXCVBNM<>?
+Combined 97 glyphs into bitmap texture at D:/Unity Projects/PlayableAdDemo/LunaTemp/stage1/tmp/fonts/LiberationSans-53584/output_0.png (56kb)
+Found custom rules for texture Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
+  {"maxWidth":256,"maxHeight":256,"format":"png32","compression":"none","quality":65,"script":"","ext":"","name":"Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset","isOverride":true}
 Resources:
 {}
-report@assets:stage2 1816.65
-report@assets:stage3 130.12
+report@assets:stage2 1976.66
+report@assets:stage3 133.61
 [ Stage2 ] Assets postprocessed and bundled successfully
-report@config:unity 0.10
-report@config:load 30.06
-report@config:unity 0.23
-report@code:compose 58.05
+report@config:unity 0.12
+report@config:load 27.31
+report@config:unity 0.11
+report@code:compose 45.56
 Authorized using stored user info.
-report@account:authorize 6.55
+report@account:authorize 4.42
 MSBuild version 17.9.8+b34f75857 for .NET Framework
 
-Build started 13/10/2024 17:30:08.
+Build started 14/10/2024 00:26:07.
 
 
 
 Project "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" on node 1 (Rebuild target(s)).
 CoreClean:
-
   Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.dll".
 
   Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityScriptsCompiler.pdb".
@@ -73,6 +77,8 @@ CoreClean:
 
   Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.xml".
 
+  Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\TextMeshPro.dll".
+
   Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.AssemblyReference.cache".
 
   Deleting file "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.CoreCompileInputs.cache".
@@ -87,44 +93,45 @@ GenerateTargetFrameworkMonikerAttribute:
 Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
 
 CoreCompile:
-  C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:CS0626,1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:UNITY_LUNA;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_2022;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2022_3;UNITY_2022_3_33 /highentropyva+ /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll /debug+ /debug:full /optimize- /out:obj\Debug\UnityScriptsCompiler.dll /subsystemversion:6.00 /target:library /warnaserror- /utf8output /langversion:8 "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\PlayerInputManager.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\TestPlayer.cs" Properties/AssemblyInfo.cs Sources/OtherDummyScript.cs "obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.cs"
+  C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Roslyn\csc.exe /noconfig /nowarn:CS0626,1701,1702 /fullpaths /nostdlib+ /errorreport:prompt /warn:4 /define:UNITY_LUNA;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_2022;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;UNITY_2021_1_OR_NEWER;UNITY_2021_2_OR_NEWER;UNITY_2021_3_OR_NEWER;UNITY_2022_1_OR_NEWER;UNITY_2022_2_OR_NEWER;UNITY_2022_3_OR_NEWER;UNITY_2022_3;UNITY_2022_3_33 /highentropyva+ /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.6\TextMeshPro.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll /reference:C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll /debug+ /debug:full /optimize- /out:obj\Debug\UnityScriptsCompiler.dll /subsystemversion:6.00 /target:library /warnaserror- /utf8output /langversion:8 "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\LunaManager.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\PlayerInputManager.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\TestPlayer.cs" "D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\UIManager.cs" Properties/AssemblyInfo.cs Sources/OtherDummyScript.cs "obj\Debug\.NETFramework,Version=v4.7.AssemblyAttributes.cs"
 
-D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(12,40): warning CS0649: Field 'GuardController.endPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(9,40): warning CS0649: Field 'GuardController.obstacleMask' is never assigned to, and will always have its default value [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(6,44): warning CS0649: Field 'GuardController.player' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\UIManager.cs(6,37): warning CS0649: Field 'UIManager.downloadNowButton' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(9,40): warning CS0649: Field 'GuardController.obstacleMask' is never assigned to, and will always have its default value [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\UIManager.cs(7,44): warning CS0649: Field 'UIManager.catController' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(12,40): warning CS0649: Field 'GuardController.endPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(7,40): warning CS0649: Field 'CatController.catRb' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(11,40): warning CS0649: Field 'GuardController.startingPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(7,40): warning CS0649: Field 'CatController.catRb' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-
-  CompilerServer: server - server processed compilation - c28c29ff-ad1a-4fc5-8814-dc1c74a00349
+  CompilerServer: server - server processed compilation - 43482be5-8d16-4e6e-8461-c28c2f6ab727
 
 _CopyFilesMarkedCopyLocal:
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.dll".
+
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.dll".
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.dll".
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\DOTween.dll".
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.dll".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.dll".
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.dll".
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.dll".
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.dll".
-
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\DOTween.1.2.705\lib\net40\DOTween.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\DOTween.dll".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.dll".
-
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.dll".
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.dll".
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.textmeshpro\3.0.6\TextMeshPro.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\TextMeshPro.dll".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Vendor\UnityEngine.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.dll".
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.dll".
+
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.dll".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.ui\1.2.1\UnityEngine.UI.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UI.dll".
 
-  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.xml".
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\com.unity.urp\7.6\UnityEngine.UniversalRenderPipeline.dll" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\UnityEngine.UniversalRenderPipeline.dll".
 
+  Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Core.17.9.42-luna\lib\net40\Bridge.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.xml".
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Html5.17.9.0\lib\net40\Bridge.Html5.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.Html5.xml".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.WebGL.1.22.0\lib\net40\Bridge.WebGL.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Bridge.WebGL.xml".
-
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Bridge.Newtonsoft.Json.1.16.0\lib\net40\Newtonsoft.Json.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Newtonsoft.Json.xml".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.Core.1.6.6733\lib\net40\Retyped.Core.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.Core.xml".
@@ -132,6 +139,7 @@ _CopyFilesMarkedCopyLocal:
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.dom.2.8.6733\lib\net40\Retyped.dom.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.dom.xml".
 
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.es5.2.8.6733\lib\net40\Retyped.es5.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.es5.xml".
+
   Copying file from "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\packages\Retyped.scripthost.2.8.6733\lib\net40\Retyped.scripthost.xml" to "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\bin\Debug\Retyped.scripthost.xml".
 
   Creating "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\obj\Debug\Scripts.csproj.Up2Date" because "AlwaysCreate" was specified.
@@ -162,29 +170,31 @@ Build succeeded.
 
 "C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj" (Rebuild target) (1) ->
 (CoreCompile target) -> 
-  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(12,40): warning CS0649: Field 'GuardController.endPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(9,40): warning CS0649: Field 'GuardController.obstacleMask' is never assigned to, and will always have its default value [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
   D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(6,44): warning CS0649: Field 'GuardController.player' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
-  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(11,40): warning CS0649: Field 'GuardController.startingPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\UIManager.cs(6,37): warning CS0649: Field 'UIManager.downloadNowButton' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(9,40): warning CS0649: Field 'GuardController.obstacleMask' is never assigned to, and will always have its default value [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\UIManager.cs(7,44): warning CS0649: Field 'UIManager.catController' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(12,40): warning CS0649: Field 'GuardController.endPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
   D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\CatController.cs(7,40): warning CS0649: Field 'CatController.catRb' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
+  D:\Unity Projects\PlayableAdDemo\LunaTemp\stage3\processed-scripts\Assets\_Project\Scripts\GuardController.cs(11,40): warning CS0649: Field 'GuardController.startingPoint' is never assigned to, and will always have its default value null [C:\Users\nishc\Downloads\6.1.1\pipeline\templates\LunaCompiler\Scripts\Scripts.csproj]
 
-    5 Warning(s)
+    7 Warning(s)
     0 Error(s)
 
 
-Time Elapsed 00:00:07.99
+Time Elapsed 00:00:07.41
 
 Source code compiled successfully!
 ﻿
 [ error ] $﻿
 Diagnostics gathered successfully
-report@code:build 24736.22
-report@diagnostics:verify 0.50
-report@diagnostics:upload 1183.56
-report@code:stage 6585.25
+report@code:build 12993.00
+report@diagnostics:verify 0.37
+report@diagnostics:upload 1180.40
+report@code:stage 7230.55
 [ Stage3 ] Code compiled and bundled successfully.
-report@code:bundle 32611.42
-report@package:stage 1494.97
+report@code:bundle 21485.10
+report@package:stage 951.88
 [ Stage4 ] Target platform: develop
 [ Stage4 ] Package bundled successfully
-report@assets:stats 0.15
+report@assets:stats 0.16

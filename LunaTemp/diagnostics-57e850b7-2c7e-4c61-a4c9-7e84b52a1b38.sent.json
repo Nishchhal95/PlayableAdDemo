@@ -1,0 +1,148 @@
+{
+    "BuildID": "57e850b7-2c7e-4c61-a4c9-7e84b52a1b38",
+    "Command": "project:build",
+    "ProjectID": "d4afc2a84584c294dab5d64a56fdd13b",
+    "ProjectStateHash": "bacb17a2603930399d504c421c5c2fed643deb2810ef8c620ed177e746687380",
+    "StageCompletedAt": 3,
+    "EarliestFatalError": 0,
+    "StartTime": 1728858359073,
+    "EndTime": 1728858377600,
+    "PlaygroundUserID": 18342,
+    "OperatingSystem": "win32",
+    "UnityPackageID": null,
+    "TargetPlatform": "develop",
+    "UnityVersion": "2022.3.33f1",
+    "LunaVersion": "6.1.1",
+    "LogCount": 5,
+    "Logs": [
+        {
+            "LogID": "2bfa730f-2cbf-44e2-a471-0b488f065064",
+            "Order": 5,
+            "Timestamp": 1728858377744,
+            "Stage": 3,
+            "ErrorType": 3,
+            "ErrorCode": "LP3007",
+            "Description": "You are not using any custom events",
+            "Details": [
+                "You are not using any custom events. It is recommended to use custom events to have a better understanding of the playable."
+            ],
+            "DescriptionValues": [
+                ""
+            ],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": null,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "a024dab1-f8af-4654-a186-a1ebffc9325a",
+            "Order": 0,
+            "Timestamp": 1728858360262,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1030",
+            "Description": "TMP Font Asset uses unsupported 'Atlas Population Mode'",
+            "Details": [
+                "TMP Font Asset '{0}' uses Atlas Population Mode '{1}' which is not supported"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "LiberationSans SDF - Fallback",
+                "Dynamic"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "81e76ca8-1916-4b55-9659-a6e715cb3a98",
+            "Order": 1,
+            "Timestamp": 1728858361753,
+            "Stage": 1,
+            "ErrorType": 0,
+            "ErrorCode": "LP1015",
+            "Description": "This TMP version is not fully supported",
+            "Details": [
+                "The incorrect Text Mesh Pro for this Unity version is in use, please update or downgrade to the recommended version {0} in the package manager. Go to Window → Package Manager"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                ""
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "0fd8d627-4eb2-4cba-a21a-91de08c63c79",
+            "Order": 2,
+            "Timestamp": 1728858361753,
+            "Stage": 1,
+            "ErrorType": 3,
+            "ErrorCode": "LP1002",
+            "Description": "Repeat wrap mode used on a texture with non power-of-two dimensions, this might not be rendered correctly.",
+            "Details": [
+                "Repeat wrap mode used on 'LiberationSans SDF Atlas' texture at 'Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset' with non power-of-two dimensions, this might not be rendered correctly."
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [
+                "LiberationSans SDF Atlas",
+                "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset"
+            ],
+            "LogCount": 1,
+            "LinePosition": 0,
+            "FilePath": "Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        },
+        {
+            "LogID": "150d3042-166b-496f-b640-cda445b9ae2e",
+            "Order": 3,
+            "Timestamp": 1728858361753,
+            "Stage": 1,
+            "ErrorType": 2,
+            "ErrorCode": "LP1010",
+            "Description": "Looks like a collider was scaled, this might affect performance.",
+            "Details": [
+                "Ground",
+                "WallLeft",
+                "WallRight",
+                "WallTop",
+                "WallBottom",
+                "Wall",
+                "Wall",
+                "Door",
+                "Door",
+                "Wall",
+                "Wall",
+                "Door",
+                "Door",
+                "Wall",
+                "Wall",
+                "Door",
+                "Door",
+                "WinningCube"
+            ],
+            "DescriptionValues": [],
+            "DetailsValues": [],
+            "LogCount": 18,
+            "LinePosition": 0,
+            "FilePath": "",
+            "ClassName": "",
+            "MemberName": "",
+            "Severity": 0
+        }
+    ]
+}

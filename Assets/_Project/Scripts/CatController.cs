@@ -105,7 +105,7 @@ public class CatController : MonoBehaviour
     public void GameEnd()
     {
         ResetGameControls();
-        LunaLifeCycleEnd();
+        LunaManager.End();
     }
 
     private void ResetGameControls()
@@ -114,11 +114,5 @@ public class CatController : MonoBehaviour
         catRb.velocity = Vector3.zero;
         pointerPressed = false;
         isDragging = false;
-    }
-
-    private void LunaLifeCycleEnd()
-    {
-        Luna.Unity.LifeCycle.GameEnded();
-        Luna.Unity.Playable.InstallFullGame();
     }
 }

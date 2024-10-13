@@ -3,7 +3,9 @@
   "groups": [
     [
       "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/CatController.cs",
-      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/GuardController.cs"
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/GuardController.cs",
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/UIManager.cs",
+      "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/LunaManager.cs"
     ],
     [
       "D:/Unity Projects/PlayableAdDemo/LunaTemp/stage3/processed-scripts/Assets/_Project/Scripts/PlayerInputManager.cs"

@@ -20,6 +20,11 @@ public class CatController : MonoBehaviour
 
     private void Update()
     {
+        if (GameOver)
+        {
+            return;
+        }
+        
         if (Input.GetMouseButtonDown(0))
         {
             OnPointerPress();
@@ -94,18 +99,20 @@ public class CatController : MonoBehaviour
         {
             return;
         }
-        LunaLifeCycleEnd();
+        GameEnd();
     }
 
     public void GameEnd()
     {
-        GameOver = true;
-        LunaLifeCycleEnd();
+        ResetGameControls();
+        LunaManager.End();
     }
 
-    private void LunaLifeCycleEnd()
+    private void ResetGameControls()
     {
-        Luna.Unity.LifeCycle.GameEnded();
-        Luna.Unity.Playable.InstallFullGame();
+        GameOver = true;
+        catRb.velocity = Vector3.zero;
+        pointerPressed = false;
+        isDragging = false;
     }
 }

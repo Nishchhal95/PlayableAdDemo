@@ -1,6 +1,6 @@
-if ( TRACE ) { TRACE( JSON.parse( '["CatController#init","CatController#Update","CatController#FixedUpdate","CatController#OnPointerPress","CatController#OnPointerRelease","CatController#OnPointerMove","CatController#DetectDrag","CatController#MoveCat","CatController#OnTriggerEnter","CatController#GameEnd","CatController#LunaLifeCycleEnd","GuardController#init","GuardController#Start","GuardController#Update","GuardController#MoveRoutine","GuardController#SwitchTarget","GuardController#LookForPlayer","GuardController#IsPlayerInRange","GuardController#CanRaycastPlayer","GuardController#OnDrawGizmos"]' ) ); }
+if ( TRACE ) { TRACE( JSON.parse( '["CatController#init","CatController#Update","CatController#FixedUpdate","CatController#OnPointerPress","CatController#OnPointerRelease","CatController#OnPointerMove","CatController#DetectDrag","CatController#MoveCat","CatController#OnTriggerEnter","CatController#GameEnd","CatController#ResetGameControls","GuardController#init","GuardController#Start","GuardController#Update","GuardController#MoveRoutine","GuardController#SwitchTarget","GuardController#LookForPlayer","GuardController#IsPlayerInRange","GuardController#CanRaycastPlayer","GuardController#OnDrawGizmos","LunaManager#End","UIManager#OnEnable","UIManager#OnDisable","UIManager#OnDownloadButtonClicked"]' ) ); }
 /**
- * @version 1.0.9052.31504
+ * @version 1.0.9053.784
  * @copyright anton
  * @compiler Bridge.NET 17.9.42-luna
  */
@@ -40,6 +40,10 @@ if ( TRACE ) { TRACE( "CatController#init", this ); }
             /*CatController.Update start.*/
             Update: function () {
 if ( TRACE ) { TRACE( "CatController#Update", this ); }
+
+                if (this.GameOver) {
+                    return;
+                }
 
                 if (UnityEngine.Input.GetMouseButtonDown(0)) {
                     this.OnPointerPress();
@@ -129,7 +133,7 @@ if ( TRACE ) { TRACE( "CatController#OnTriggerEnter", this ); }
                 if (!other.CompareTag("Win")) {
                     return;
                 }
-                this.LunaLifeCycleEnd();
+                this.GameEnd();
             },
             /*CatController.OnTriggerEnter end.*/
 
@@ -137,19 +141,21 @@ if ( TRACE ) { TRACE( "CatController#OnTriggerEnter", this ); }
             GameEnd: function () {
 if ( TRACE ) { TRACE( "CatController#GameEnd", this ); }
 
-                this.GameOver = true;
-                this.LunaLifeCycleEnd();
+                this.ResetGameControls();
+                LunaManager.End();
             },
             /*CatController.GameEnd end.*/
 
-            /*CatController.LunaLifeCycleEnd start.*/
-            LunaLifeCycleEnd: function () {
-if ( TRACE ) { TRACE( "CatController#LunaLifeCycleEnd", this ); }
+            /*CatController.ResetGameControls start.*/
+            ResetGameControls: function () {
+if ( TRACE ) { TRACE( "CatController#ResetGameControls", this ); }
 
-                Luna.Unity.LifeCycle.GameEnded();
-                Luna.Unity.Playable.InstallFullGame();
+                this.GameOver = true;
+                this.catRb.velocity = pc.Vec3.ZERO.clone();
+                this.pointerPressed = false;
+                this.isDragging = false;
             },
-            /*CatController.LunaLifeCycleEnd end.*/
+            /*CatController.ResetGameControls end.*/
 
 
         }
@@ -366,17 +372,81 @@ if ( TRACE ) { TRACE( "GuardController#OnDrawGizmos", this ); }
     });
     /*IAmAnEmptyScriptJustToMakeCodelessProjectsCompileProperty end.*/
 
+    /*LunaManager start.*/
+    Bridge.define("LunaManager", {
+        statics: {
+            methods: {
+                /*LunaManager.End:static start.*/
+                End: function () {
+if ( TRACE ) { TRACE( "LunaManager#End", this ); }
+
+                    Luna.Unity.LifeCycle.GameEnded();
+                    Luna.Unity.Playable.InstallFullGame();
+                },
+                /*LunaManager.End:static end.*/
+
+
+            }
+        }
+    });
+    /*LunaManager end.*/
+
+    /*UIManager start.*/
+    Bridge.define("UIManager", {
+        inherits: [UnityEngine.MonoBehaviour],
+        fields: {
+            downloadNowButton: null,
+            catController: null
+        },
+        methods: {
+            /*UIManager.OnEnable start.*/
+            OnEnable: function () {
+if ( TRACE ) { TRACE( "UIManager#OnEnable", this ); }
+
+                this.downloadNowButton.onClick.AddListener(Bridge.fn.cacheBind(this, this.OnDownloadButtonClicked));
+            },
+            /*UIManager.OnEnable end.*/
+
+            /*UIManager.OnDisable start.*/
+            OnDisable: function () {
+if ( TRACE ) { TRACE( "UIManager#OnDisable", this ); }
+
+                this.downloadNowButton.onClick.RemoveListener(Bridge.fn.cacheBind(this, this.OnDownloadButtonClicked));
+            },
+            /*UIManager.OnDisable end.*/
+
+            /*UIManager.OnDownloadButtonClicked start.*/
+            OnDownloadButtonClicked: function () {
+if ( TRACE ) { TRACE( "UIManager#OnDownloadButtonClicked", this ); }
+
+                this.catController.GameEnd();
+            },
+            /*UIManager.OnDownloadButtonClicked end.*/
+
+
+        }
+    });
+    /*UIManager end.*/
+
     if ( MODULE_reflection ) {
     var $m = Bridge.setMetadata,
-        $n = ["UnityEngine","System","System.Collections"];
+        $n = ["UnityEngine","System","System.Collections","UnityEngine.UI"];
 
     /*CatController start.*/
-    $m("CatController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"DetectDrag","t":8,"pi":[{"n":"currentPointerPos","pt":$n[0].Vector2,"ps":0}],"sn":"DetectDrag","rt":$n[1].Void,"p":[$n[0].Vector2]},{"a":1,"n":"FixedUpdate","t":8,"sn":"FixedUpdate","rt":$n[1].Void},{"a":2,"n":"GameEnd","t":8,"sn":"GameEnd","rt":$n[1].Void},{"a":1,"n":"LunaLifeCycleEnd","t":8,"sn":"LunaLifeCycleEnd","rt":$n[1].Void},{"a":1,"n":"MoveCat","t":8,"sn":"MoveCat","rt":$n[1].Void},{"a":1,"n":"OnPointerMove","t":8,"sn":"OnPointerMove","rt":$n[1].Void},{"a":1,"n":"OnPointerPress","t":8,"sn":"OnPointerPress","rt":$n[1].Void},{"a":1,"n":"OnPointerRelease","t":8,"sn":"OnPointerRelease","rt":$n[1].Void},{"a":1,"n":"OnTriggerEnter","t":8,"pi":[{"n":"other","pt":$n[0].Collider,"ps":0}],"sn":"OnTriggerEnter","rt":$n[1].Void,"p":[$n[0].Collider]},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":2,"n":"GameOver","t":16,"rt":$n[1].Boolean,"g":{"a":2,"n":"get_GameOver","t":8,"rt":$n[1].Boolean,"fg":"GameOver","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"s":{"a":1,"n":"set_GameOver","t":8,"p":[$n[1].Boolean],"rt":$n[1].Void,"fs":"GameOver"},"fn":"GameOver"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"catRb","t":4,"rt":$n[0].Rigidbody,"sn":"catRb"},{"a":1,"n":"currentPointerPosition","t":4,"rt":$n[0].Vector2,"sn":"currentPointerPosition"},{"a":1,"n":"dragDirection","t":4,"rt":$n[0].Vector2,"sn":"dragDirection"},{"at":[new UnityEngine.LunaPlaygroundFieldAttribute("Threshold to Drag", 2, "Game Settings", false, null),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dragThreshold","t":4,"rt":$n[1].Single,"sn":"dragThreshold","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"isDragging","t":4,"rt":$n[1].Boolean,"sn":"isDragging","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"moveDirection","t":4,"rt":$n[0].Vector3,"sn":"moveDirection"},{"at":[new UnityEngine.LunaPlaygroundFieldAttribute("Player Move Speed", 1, "Game Settings", false, null),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"moveSpeed","t":4,"rt":$n[1].Single,"sn":"moveSpeed","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"pointerPressed","t":4,"rt":$n[1].Boolean,"sn":"pointerPressed","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"startPointerPosition","t":4,"rt":$n[0].Vector2,"sn":"startPointerPosition"},{"a":1,"backing":true,"n":"<GameOver>k__BackingField","t":4,"rt":$n[1].Boolean,"sn":"GameOver","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
+    $m("CatController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"DetectDrag","t":8,"pi":[{"n":"currentPointerPos","pt":$n[0].Vector2,"ps":0}],"sn":"DetectDrag","rt":$n[1].Void,"p":[$n[0].Vector2]},{"a":1,"n":"FixedUpdate","t":8,"sn":"FixedUpdate","rt":$n[1].Void},{"a":2,"n":"GameEnd","t":8,"sn":"GameEnd","rt":$n[1].Void},{"a":1,"n":"MoveCat","t":8,"sn":"MoveCat","rt":$n[1].Void},{"a":1,"n":"OnPointerMove","t":8,"sn":"OnPointerMove","rt":$n[1].Void},{"a":1,"n":"OnPointerPress","t":8,"sn":"OnPointerPress","rt":$n[1].Void},{"a":1,"n":"OnPointerRelease","t":8,"sn":"OnPointerRelease","rt":$n[1].Void},{"a":1,"n":"OnTriggerEnter","t":8,"pi":[{"n":"other","pt":$n[0].Collider,"ps":0}],"sn":"OnTriggerEnter","rt":$n[1].Void,"p":[$n[0].Collider]},{"a":1,"n":"ResetGameControls","t":8,"sn":"ResetGameControls","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"a":2,"n":"GameOver","t":16,"rt":$n[1].Boolean,"g":{"a":2,"n":"get_GameOver","t":8,"rt":$n[1].Boolean,"fg":"GameOver","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},"s":{"a":1,"n":"set_GameOver","t":8,"p":[$n[1].Boolean],"rt":$n[1].Void,"fs":"GameOver"},"fn":"GameOver"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"catRb","t":4,"rt":$n[0].Rigidbody,"sn":"catRb"},{"a":1,"n":"currentPointerPosition","t":4,"rt":$n[0].Vector2,"sn":"currentPointerPosition"},{"a":1,"n":"dragDirection","t":4,"rt":$n[0].Vector2,"sn":"dragDirection"},{"at":[new UnityEngine.LunaPlaygroundFieldAttribute("Threshold to Drag", 2, "Game Settings", false, null),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"dragThreshold","t":4,"rt":$n[1].Single,"sn":"dragThreshold","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"isDragging","t":4,"rt":$n[1].Boolean,"sn":"isDragging","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"moveDirection","t":4,"rt":$n[0].Vector3,"sn":"moveDirection"},{"at":[new UnityEngine.LunaPlaygroundFieldAttribute("Player Move Speed", 1, "Game Settings", false, null),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"moveSpeed","t":4,"rt":$n[1].Single,"sn":"moveSpeed","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"a":1,"n":"pointerPressed","t":4,"rt":$n[1].Boolean,"sn":"pointerPressed","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"startPointerPosition","t":4,"rt":$n[0].Vector2,"sn":"startPointerPosition"},{"a":1,"backing":true,"n":"<GameOver>k__BackingField","t":4,"rt":$n[1].Boolean,"sn":"GameOver","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}}]}; }, $n);
     /*CatController end.*/
 
     /*GuardController start.*/
     $m("GuardController", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"CanRaycastPlayer","t":8,"pi":[{"n":"directionToPlayer","pt":$n[0].Vector3,"ps":0}],"sn":"CanRaycastPlayer","rt":$n[1].Boolean,"p":[$n[0].Vector3],"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"IsPlayerInRange","t":8,"sn":"IsPlayerInRange","rt":$n[1].Boolean,"box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"a":1,"n":"LookForPlayer","t":8,"sn":"LookForPlayer","rt":$n[1].Void},{"a":1,"n":"MoveRoutine","t":8,"sn":"MoveRoutine","rt":$n[2].IEnumerator},{"a":1,"n":"OnDrawGizmos","t":8,"sn":"OnDrawGizmos","rt":$n[1].Void},{"a":1,"n":"Start","t":8,"sn":"Start","rt":$n[1].Void},{"a":1,"n":"SwitchTarget","t":8,"sn":"SwitchTarget","rt":$n[1].Void},{"a":1,"n":"Update","t":8,"sn":"Update","rt":$n[1].Void},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"canMove","t":4,"rt":$n[1].Boolean,"sn":"canMove","box":function ($v) { return Bridge.box($v, System.Boolean, System.Boolean.toString);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"endPoint","t":4,"rt":$n[0].Transform,"sn":"endPoint"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"obstacleMask","t":4,"rt":$n[0].LayerMask,"sn":"obstacleMask"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"player","t":4,"rt":CatController,"sn":"player"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"startingPoint","t":4,"rt":$n[0].Transform,"sn":"startingPoint"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"startingPosition","t":4,"rt":$n[0].Vector3,"sn":"startingPosition"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"targetPoint","t":4,"rt":$n[0].Transform,"sn":"targetPoint"},{"at":[new UnityEngine.LunaPlaygroundFieldAttribute("Guard Move duration to move from one to another point", 3, "Game Settings", false, null),new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"timeDuration","t":4,"rt":$n[1].Single,"sn":"timeDuration","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"timeElapsed","t":4,"rt":$n[1].Single,"sn":"timeElapsed","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"visionAngle","t":4,"rt":$n[1].Single,"sn":"visionAngle","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"visionRange","t":4,"rt":$n[1].Single,"sn":"visionRange","box":function ($v) { return Bridge.box($v, System.Single, System.Single.format, System.Single.getHashCode);}}]}; }, $n);
     /*GuardController end.*/
+
+    /*LunaManager start.*/
+    $m("LunaManager", function () { return {"att":1048961,"a":2,"s":true,"m":[{"a":2,"n":"End","is":true,"t":8,"sn":"End","rt":$n[1].Void}]}; }, $n);
+    /*LunaManager end.*/
+
+    /*UIManager start.*/
+    $m("UIManager", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"},{"a":1,"n":"OnDisable","t":8,"sn":"OnDisable","rt":$n[1].Void},{"a":1,"n":"OnDownloadButtonClicked","t":8,"sn":"OnDownloadButtonClicked","rt":$n[1].Void},{"a":1,"n":"OnEnable","t":8,"sn":"OnEnable","rt":$n[1].Void},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"catController","t":4,"rt":CatController,"sn":"catController"},{"at":[new UnityEngine.SerializeFieldAttribute()],"a":1,"n":"downloadNowButton","t":4,"rt":$n[3].Button,"sn":"downloadNowButton"}]}; }, $n);
+    /*UIManager end.*/
 
     /*IAmAnEmptyScriptJustToMakeCodelessProjectsCompileProperty start.*/
     $m("IAmAnEmptyScriptJustToMakeCodelessProjectsCompileProperty", function () { return {"att":1048577,"a":2,"m":[{"a":2,"isSynthetic":true,"n":".ctor","t":1,"sn":"ctor"}]}; }, $n);
